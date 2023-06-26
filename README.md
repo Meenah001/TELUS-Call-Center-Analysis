@@ -22,13 +22,15 @@ The above image depict the dataset in it raw form before cleaning
 
 Having checked each column for missing values, inconsistencies, data type error, Outliers, Ivalid data and structural errors, I got to know that "Call Id", "Agent", "Date", "Topic", "Answered(Y/N)" and "Resolved" columns had no problem, they are perfectly okay. But the "Time", Speed of answere in seconds", "AvgTalkDuration", and "Satisfaction rating" columns have some cleaning to be done on them.
 
-Starting with the "Time" column, It's seen that it contains both date and time. In order to extract only the time I usded the split column function. splitting using the space delimeter (Left-most delimeter). By doing this I got my "Time" column with the date being mixed with it.
+. Starting with the "Time" column, It's seen that it contains both date and time. In order to extract only the time I usded the split column function. splitting using the space delimeter (Left-most delimeter). By doing this I got my "Time" column with the date being mixed with it.
 
-It was seen in the "Speed of answer in seconds" column that there were some missing values (null). After checking that if the null values were removed it won't affect the whole dataset I decided to remove them from the column, This makes the column cleaned.
+. It was seen in the "Speed of answer in seconds" column that there were some missing values (null). After checking that if the null values were removed it won't affect the whole dataset I decided to remove them from the column, This makes the column cleaned.
 
-The "AvgTalkDuration" column was removed entirely from the dataset because it contains contaminated entries. Time and Year were found in this column which doesn't represent what the column header is.
+. The "AvgTalkDuration" column was removed entirely from the dataset because it contains contaminated entries. Time and Year were found in this column which doesn't represent what the column header is.
 
+. "Satisfaction rating" column also contains some missing values (null). I removed all these null entries from the column in order for the column to be cleaned.
 
+I went ahead to do some little changes to the "Date", "Answered (Y/N)" and "Resolved" columns. For "Answered (Y/N)" and "Resolved" columns, I replacd the value "Y" and "N" TO "Yes" and "No" respectively. I extracted the "Month Name" and "Day Name" from the "Date" column. 
 
 
 
